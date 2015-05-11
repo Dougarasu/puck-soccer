@@ -1,0 +1,124 @@
+.menu .logo {
+  width: 400px;
+  margin-bottom: 30px;
+}
+.menu .btn {
+  margin: 15px;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/Lobster.otf");
+}
+.credits .back-btn {
+  position: absolute;
+  transform: translate(140%, 800%);
+}
+.credits .developers {
+  position: absolute;
+  width: 350px;
+  height: 260px;
+  background: rgba(220, 221, 224, 0.7);
+  border-radius: 6%;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+.credits .developers .subtitle {
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/Lobster.otf");
+}
+.addplayers .back-btn {
+  position: absolute;
+  transform: translate(-240%, 800%);
+}
+.addplayers .start-btn {
+  position: absolute;
+  transform: translate(140%, 800%);
+}
+.addplayers .carousel {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 250px;
+  transform: translate(-50%, -50%);
+}
+.addplayers .carousel .item {
+  text-align: center;
+  background: #333;
+  width: 100px;
+  height: 100px;
+}
+.addplayers .carousel .glyphicon {
+  top: 40%;
+}
+.addplayers .vs {
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 250px;
+  text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;
+  transform: translate(-50%, -50%);
+}
+.addplayers .name {
+  position: absolute;
+  width: 150px;
+}
+.addplayers #name-p1 {
+  position: absolute;
+  transform: translate(510%, 450%);
+}
+.addplayers #name-p2 {
+  position: absolute;
+  transform: translate(675%, 450%);
+}
+.addplayers #img-p1 {
+  transform: translate(395%, -50%);
+}
+.addplayers #img-p2 {
+  transform: translate(790%, -50%);
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/Lobster.otf");
+}
+.wrapper {
+  text-align: center;
+}
+.wrapper .bg {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  left: 50%;
+  background: url("../img/menu_bg.jpg");
+  background-repeat: no-repeat;
+  transform: translate(-50%, -8%);
+  z-index: -1;
+}
+.wrapper .darken {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/menu_bg.jpg");
+}
+.wrapper .screen {
+  margin-top: 60px;
+}
+.wrapper .screen .font {
+  font-family: "Lobster";
+  color: #dadbde;
+}
+.wrapper .screen .font .title {
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;
+  transform: translate(-50%, -40%);
+}
+
+.btn {
+  width: 150px;
+  font-size: 20px;
+}

@@ -1,0 +1,27 @@
+@import "settings";
+
+.credits {
+    //text-align: center;
+    
+    .back-btn {
+        position: absolute;
+        //top: 60%;
+        //left: $screen_width;
+        transform: translate(140%, 800%);
+    }
+    
+    .developers {
+        position: absolute;
+        width: 350px;
+        height: 260px;
+        background: rgba(220, 221, 224, 0.7);
+        border-radius: 6%;
+        color: white;
+        left: 50%;
+        transform: translate(-50%, 30%);
+        
+        .subtitle {
+            font-weight: bold;
+        }
+    }
+}

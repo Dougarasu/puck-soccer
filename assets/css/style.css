@@ -1,0 +1,9 @@
+.navbar {
+  min-height: 120px;
+}
+.navbar .navbar-header {
+  background: red;
+}
+.navbar .navbar-header .navbar-brand {
+  background: yellow;
+}

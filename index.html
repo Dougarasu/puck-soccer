@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Bootstrap 101 Template</title>
+		
+		<!-- Bootstrap -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/style_soccer.css" rel="stylesheet">
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="bg"></div>
+			
+			<div class="menu screen hidden">
+				<div>
+					<img class="logo" src="assets/img/logo.png"></img>
+				</div>
+				<div>
+					<button class="btn btn-default play">Play</button>	
+				</div>
+				<div>
+					<button class="btn btn-default credits">Credits</button>
+				</div>
+			</div>
+			
+			<div class="credits screen hidden">
+				<div class="font">
+					<p class="title">Credits</p>
+				</div>
+				<div class="developers">
+					<h3 class="subtitle">Game Design</h3>
+					<h4>Douglas Púppio Pereira</h4>
+					<h3 class="subtitle">Artist</h3>
+					<h4>Douglas Púppio Pereira</h4>
+					<h3 class="subtitle">Programmer</h3>
+					<h4>Douglas Púppio Pereira</h4>
+				</div>
+				<div>
+					<button class="btn btn-default back-btn">Back</button>	
+				</div>
+			</div>
+		
+			<div class="addplayers screen ">
+				<div class="font">
+					<p class="title">Add Players</p>
+				</div>
+						
+				<!-- Profile Player1 -->
+				<div id="img-p1" class="carousel slide" data-ride="carousel" data-interval="">
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="assets/img/profiles/brazil.png">
+				    </div>
+				    <div class="item">
+				      <img src="assets/img/profiles/china.png">
+				    </div>
+				    <div class="item">
+				      <img src="assets/img/profiles/poland.png">
+				    </div>
+				    <div class="item">
+				      <img src="assets/img/profiles/usa.png">
+				    </div>
+				  </div>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#img-p1" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#img-p1" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				<!-- Player1 Name -->
+				<div class="form-group name" id="name-p1">
+				  <input class="form-control" id="focusedInput" value="player1" type="text">
+				</div>
+				
+				<!-- Profile Player2 -->
+				<div id="img-p2" class="carousel slide" data-ride="carousel" data-interval="">
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item">
+				      <img src="assets/img/profiles/brazil.png">
+				    </div>
+				    <div class="item">
+				      <img src="assets/img/profiles/china.png">
+				    </div>
+				    <div class="item">
+				      <img src="assets/img/profiles/poland.png">
+				    </div>
+				    <div class="item active">
+				      <img src="assets/img/profiles/usa.png">
+				    </div>
+				  </div>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#img-p2" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#img-p2" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				<!-- Player2 Name -->
+				<div class="form-group name" id="name-p2">
+				  <input class="form-control" id="focusedInput" value="player2" type="text">
+				</div>
+				
+				<div class="font">
+					<p class="vs">VS</p>
+				</div>
+				
+				<!-- Back Button -->
+				<div>
+					<button class="btn btn-default back-btn">Back</button>	
+				</div>
+				<!-- Start Button -->
+				<div>
+					<button class="btn btn-default start-btn">Start!</button>	
+				</div>
+			</div>
+		</div>
+		
+		<div class="hud screen ">
+				<!-- Profile Player1 -->
+				<div class="item active">
+		      <img src="assets/img/profiles/brazil.png">
+		    </div>
+				<!-- Player1 Name -->
+				<div class="font">
+				  <input class="form-control" id="focusedInput" value="player1" type="text">
+				</div>
+				
+				<!-- Profile Player2 -->
+				
+				<div class="font">
+					<p class="vs">VS</p>
+				</div>
+				
+				<!-- Back Button -->
+				<div>
+					<button class="btn btn-default back-btn">Back</button>	
+				</div>
+				<!-- Start Button -->
+				<div>
+					<button class="btn btn-default start-btn">Start!</button>	
+				</div>
+			</div>
+		</div>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="assets/js/bootstrap.min.js"></script>
+	</body>
+</html>

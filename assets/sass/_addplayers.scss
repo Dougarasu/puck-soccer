@@ -1,0 +1,69 @@
+@import "settings";
+
+.addplayers {
+    .back-btn {
+        position: absolute;
+        transform: translate(-240%, 800%);
+    }
+    .start-btn {
+        position: absolute;
+        transform: translate(140%, 800%);
+    }
+    
+    .carousel {
+        position: absolute;
+        width: $profile-size;
+        height: $profile-size;
+        top: $screen_height/2 - 50px;
+        transform: translate(-50%, -50%);
+        
+        .item {    
+            text-align: center;
+            background: #333;
+            width: $profile-size;
+            height: $profile-size;
+        }
+        
+        .glyphicon {
+            top: 40%;
+        }
+    }
+    
+    .vs {
+        position: absolute;
+        font-size: 50px;
+        left: 50%;
+        top: 250px;
+        text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;
+        transform: translate(-50%, -50%);
+    }
+    
+    .name {
+        position: absolute;
+        width: 150px;
+        //top: 250px;
+        //transform: translate(-50%, -50%);
+    }
+    
+    #name-p1 {
+        position: absolute;
+        //left: 41%;
+        transform: translate(510%, 450%);
+    }
+    
+    #name-p2 {
+        position: absolute;
+        //left: 59%;
+        transform: translate(675%, 450%);
+    }
+    
+    #img-p1 {
+        //left: 29%;
+        transform: translate(395%, -50%);
+    }
+    
+    #img-p2 {
+        //left: 71%;
+        transform: translate(790%, -50%);
+    }
+}

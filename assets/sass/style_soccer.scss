@@ -1,0 +1,52 @@
+@import "menu";
+@import "credits";
+@import "addplayers";
+@import "settings";
+
+.wrapper {
+    text-align: center;
+    
+    .bg {
+        position: absolute;
+        width: $screen_width;
+        height: $screen_height;
+        left: 50%;
+        //float: left;
+        background: url($bg-name);
+        //background-size: auto;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -8%);
+        z-index: -1;
+    }
+    .darken {
+        background-image: 
+            linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url($bg-name);
+    }
+    
+    .screen {
+        margin-top: 60px;
+        //text-align: center;
+        
+        .font {
+            font-family: "Lobster";
+            color: $title-color;
+            
+            .title {
+                position: absolute;
+                font-size: 50px;
+                left: 50%;
+                text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;
+                transform: translate(-50%, -40%);
+            }
+        }
+    }
+}
+
+.btn {
+    width: 150px;
+    font-size: 20px;
+}
