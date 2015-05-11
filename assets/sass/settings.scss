@@ -5,7 +5,11 @@
 
 $screen_width: 800px;
 $screen_height: 600px;
+$screen_y: $screen_height - 60px;
 $profile-size: 100px;
+$profile-ingame-size: 80px;
+$profile-ingame-offset-x: 340px;
+$name-ingame-offset-x: 200px;
 $title-color: #dadbde;
 $title-stroke: #3e3e3e 0px 0px 5px;
 $bg-name: "../img/menu_bg.jpg";

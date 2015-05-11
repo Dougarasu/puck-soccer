@@ -87,6 +87,88 @@
   font-family: "Lobster";
   src: url("../fonts/Lobster.otf");
 }
+.ingame .quit-btn {
+  position: absolute;
+  left: 976px;
+  top: 470px;
+  transform: translate(-50%, -50%);
+}
+.ingame .progress {
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  top: 100px;
+  background-color: #dadbde;
+  transform: translate(-50%, -50%);
+}
+.ingame .progress .progress-bar {
+  width: 60%;
+}
+.ingame .header {
+  position: absolute;
+  left: 50%;
+}
+.ingame .header .turn-indicator {
+  position: absolute;
+  top: 60px;
+  transform: translate(-50%, -50%);
+}
+.ingame .header #bar-p1 {
+  left: -340px;
+}
+.ingame .header #bar-p2 {
+  left: 340px;
+}
+.ingame .header .score {
+  position: absolute;
+  top: -20px;
+  transform: translate(-50%, -50%);
+}
+.ingame .header #score-p1 {
+  left: -70px;
+}
+.ingame .header #score-p2 {
+  left: 70px;
+}
+.ingame .header .vs {
+  position: absolute;
+  font-size: 50px;
+  top: 0%;
+  text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;
+  transform: translate(-50%, -50%);
+}
+.ingame .header .profile {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.ingame .header .image {
+  width: 80px;
+  height: 80px;
+}
+.ingame .header #profile-p1 {
+  left: -340px;
+}
+.ingame .header #profile-p2 {
+  left: 340px;
+}
+.ingame .header .name {
+  position: absolute;
+  width: 180px;
+  font-size: 20px;
+  top: -20px;
+  transform: translate(-50%, -50%);
+}
+.ingame .header #name-p1 {
+  left: -200px;
+}
+.ingame .header #name-p2 {
+  left: 200px;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/Lobster.otf");
+}
 .wrapper {
   text-align: center;
 }
@@ -105,6 +187,8 @@
 }
 .wrapper .screen {
   margin-top: 60px;
+  width: 800px;
+  height: 600px;
 }
 .wrapper .screen .font {
   font-family: "Lobster";

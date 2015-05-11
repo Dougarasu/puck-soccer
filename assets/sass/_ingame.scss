@@ -1,0 +1,100 @@
+@import "settings";
+
+.ingame {
+    .quit-btn {
+        position: absolute;
+        left: $screen_width * 1.22;
+        top: $screen_height - 130px;
+        transform: translate(-50%, -50%);
+    }
+    
+    .progress {
+        position: absolute;
+        width: 100px;
+        left: 50%;
+        top: 100px;
+        background-color: $title-color;
+        transform: translate(-50%, -50%);
+        
+        .progress-bar {
+            width: 60%;
+        }
+    }
+    
+    .header {
+        position: absolute;
+        //background: #444;
+        left: 50%;
+        //transform: translate(-50%, -50%);
+        
+        .turn-indicator {
+            position: absolute;
+            top: 60px;
+            transform: translate(-50%, -50%);
+        }
+        
+        #bar-p1 {
+            left: -340px;
+        }
+        
+        #bar-p2 {
+            left: 340px;
+        }
+        
+        .score {
+            position: absolute;
+            top: -20px;
+            transform: translate(-50%, -50%);
+        }
+        
+        #score-p1 {
+            left: -70px;
+        }
+        
+        #score-p2 {
+            left: 70px;
+        }
+        
+        .vs {
+            position: absolute;
+            font-size: 50px;
+            top: 0%;
+            text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;
+            transform: translate(-50%, -50%);
+        }
+        
+        .profile {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        
+        .image {
+            width: $profile-ingame-size;
+            height: $profile-ingame-size;
+        }
+        
+        #profile-p1 {
+            left: -$profile-ingame-offset-x;
+        }
+        
+        #profile-p2 {
+            left: $profile-ingame-offset-x;
+        }
+        
+        .name {
+            position: absolute;
+            width: 180px;
+            font-size: 20px;
+            top: -20px;
+            transform: translate(-50%, -50%);
+        }
+        
+        #name-p1 {
+            left: -$name-ingame-offset-x;
+        }
+        
+        #name-p2 {
+            left: $name-ingame-offset-x;
+        }
+    }
+}

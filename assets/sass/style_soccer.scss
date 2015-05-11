@@ -1,6 +1,7 @@
 @import "menu";
 @import "credits";
 @import "addplayers";
+@import "ingame";
 @import "settings";
 
 .wrapper {
@@ -29,6 +30,8 @@
     
     .screen {
         margin-top: 60px;
+        width: $screen_width;
+        height: $screen_height;
         //text-align: center;
         
         .font {

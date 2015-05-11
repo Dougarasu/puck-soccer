@@ -51,7 +51,7 @@
 				</div>
 			</div>
 		
-			<div class="addplayers screen ">
+			<div class="addplayers screen hidden">
 				<div class="font">
 					<p class="title">Add Players</p>
 				</div>
@@ -111,7 +111,7 @@
 				    <span class="sr-only">Previous</span>
 				  </a>
 				  <a class="right carousel-control" href="#img-p2" role="button" data-slide="next">
-				    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
 				    <span class="sr-only">Next</span>
 				  </a>
 				</div>
@@ -133,31 +133,33 @@
 					<button class="btn btn-default start-btn">Start!</button>	
 				</div>
 			</div>
-		</div>
 		
-		<div class="hud screen ">
-				<!-- Profile Player1 -->
-				<div class="item active">
-		      <img src="assets/img/profiles/brazil.png">
-		    </div>
-				<!-- Player1 Name -->
-				<div class="font">
-				  <input class="form-control" id="focusedInput" value="player1" type="text">
+			<div class="ingame screen ">
+				<div class="header">
+					<!-- Profile Player1 -->
+			    <img id="profile-p1" class="image profile" src="assets/img/profiles/brazil.png">
+			    <span id="bar-p1" class="turn-indicator label label-success">Your turn!</span>
+			    <h1 id="score-p1" class="score">0</h1>
+			    <h1 id="name-p1" class="name">player1</h1>
+					
+					<div class="font">
+						<p class="vs">VS</p>
+					</div>
+					
+					<!-- Profile Player2 -->
+					<img id="profile-p2" class="image profile" src="assets/img/profiles/usa.png">
+			    <span id="bar-p2" class="turn-indicator label label-success">Your turn!</span>
+			    <h1 id="score-p2" class="score">0</h1>
+					<h1 id="name-p2" class="name">player2</h1>
 				</div>
 				
-				<!-- Profile Player2 -->
-				
-				<div class="font">
-					<p class="vs">VS</p>
+				<div class="progress progress-striped active">
+				  <div class="progress-bar progress-bar-danger"></div>
 				</div>
 				
-				<!-- Back Button -->
+				<!-- Quit Button -->
 				<div>
-					<button class="btn btn-default back-btn">Back</button>	
-				</div>
-				<!-- Start Button -->
-				<div>
-					<button class="btn btn-default start-btn">Start!</button>	
+					<button class="btn btn-default quit-btn">Quit</button>	
 				</div>
 			</div>
 		</div>
