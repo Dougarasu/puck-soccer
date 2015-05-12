@@ -10,7 +10,7 @@
   font-family: "Lobster";
   src: url("../fonts/Lobster.otf");
 }
-.credits .back-btn {
+.credits .btn {
   position: absolute;
   transform: translate(140%, 800%);
 }
@@ -86,6 +86,9 @@
 @font-face {
   font-family: "Lobster";
   src: url("../fonts/Lobster.otf");
+}
+.ingame #canvas {
+  position: absolute;
 }
 .ingame .quit-btn {
   position: absolute;

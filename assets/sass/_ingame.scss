@@ -1,6 +1,10 @@
 @import "settings";
 
 .ingame {
+    #canvas {
+        position: absolute;
+    }
+    
     .quit-btn {
         position: absolute;
         left: $screen_width * 1.22;

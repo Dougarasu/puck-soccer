@@ -22,19 +22,19 @@
 		<div class="wrapper">
 			<div class="bg"></div>
 			
-			<div class="menu screen hidden">
+			<div id="menu" class="menu screen">
 				<div>
 					<img class="logo" src="assets/img/logo.png"></img>
 				</div>
 				<div>
-					<button class="btn btn-default play">Play</button>	
+					<button id="btn-play" class="btn btn-default">Play</button>	
 				</div>
 				<div>
-					<button class="btn btn-default credits">Credits</button>
+					<button id="btn-credits" class="btn btn-default">Credits</button>
 				</div>
 			</div>
 			
-			<div class="credits screen hidden">
+			<div id="credits" class="credits screen" style="display: none;">
 				<div class="font">
 					<p class="title">Credits</p>
 				</div>
@@ -47,11 +47,11 @@
 					<h4>Douglas Púppio Pereira</h4>
 				</div>
 				<div>
-					<button class="btn btn-default back-btn">Back</button>	
+					<button id="btn-back-credits" class="btn btn-default">Back</button>	
 				</div>
 			</div>
 		
-			<div class="addplayers screen hidden">
+			<div id="addplayers" class="addplayers screen" style="display: none;">
 				<div class="font">
 					<p class="title">Add Players</p>
 				</div>
@@ -111,7 +111,7 @@
 				    <span class="sr-only">Previous</span>
 				  </a>
 				  <a class="right carousel-control" href="#img-p2" role="button" data-slide="next">
-				    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+				    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
 				    <span class="sr-only">Next</span>
 				  </a>
 				</div>
@@ -126,15 +126,19 @@
 				
 				<!-- Back Button -->
 				<div>
-					<button class="btn btn-default back-btn">Back</button>	
+					<button id="btn-back-addplayers" class="btn btn-default back-btn">Back</button>	
 				</div>
 				<!-- Start Button -->
 				<div>
-					<button class="btn btn-default start-btn">Start!</button>	
+					<button id="btn-start" class="btn btn-default start-btn">Start!</button>	
 				</div>
 			</div>
 		
-			<div class="ingame screen ">
+			<div id="ingame" class="ingame screen" style="display: none;">
+				<canvas id="canvas">
+					<p>You're browser does not support the required functionality to play this game.</p>
+					<p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+				</canvas>
 				<div class="header">
 					<!-- Profile Player1 -->
 			    <img id="profile-p1" class="image profile" src="assets/img/profiles/brazil.png">
@@ -154,7 +158,7 @@
 				</div>
 				
 				<div class="progress progress-striped active">
-				  <div class="progress-bar progress-bar-danger"></div>
+				  <div id="timer" class="progress-bar progress-bar-danger" style="width: 100%"></div>
 				</div>
 				
 				<!-- Quit Button -->
@@ -168,5 +172,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="assets/js/bootstrap.min.js"></script>
+		<script data-main="assets/js/main" src="assets/lib/require.js"></script>
 	</body>
 </html>
