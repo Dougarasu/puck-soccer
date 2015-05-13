@@ -4,8 +4,9 @@
 }
 
 $screen_width: 800px;
-$screen_height: 600px;
-$screen_y: $screen_height - 60px;
+$screen_height: 500px;
+$screen-top-offset: 30px;
+$screen_y: $screen_height - $screen-top-offset;
 $profile-size: 100px;
 $profile-ingame-size: 80px;
 $profile-ingame-offset-x: 340px;

@@ -5,18 +5,26 @@
 @import "settings";
 
 .wrapper {
+    position: absolute;
+    left: 35%;
     text-align: center;
+    margin-top: $screen-top-offset;
+    
+    .show-limits {
+        //background-color: #f0f;
+        line-height: 1.3em;
+        border: 2px dashed #fff;
+        border-color: #f0f;
+        border-radius: 10px;
+    }
     
     .bg {
         position: absolute;
-        width: $screen_width;
-        height: $screen_height;
-        left: 50%;
-        //float: left;
+        display: inline-block;
         background: url($bg-name);
-        //background-size: auto;
+        background-size: $screen_width $screen_height;
         background-repeat: no-repeat;
-        transform: translate(-50%, -8%);
+        transform: translate(-50%, 0%);
         z-index: -1;
     }
     .darken {
@@ -29,27 +37,32 @@
     }
     
     .screen {
-        margin-top: 60px;
+        text-align: left;
+        position: absolute;
         width: $screen_width;
         height: $screen_height;
-        //text-align: center;
+        transform: translate(-50%, 0%);
+        
+        .obj {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        
+        .btn {
+            width: 150px;
+            font-size: 20px;
+        }
         
         .font {
             font-family: "Lobster";
             color: $title-color;
-            
-            .title {
-                position: absolute;
-                font-size: 50px;
-                left: 50%;
-                text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;
-                transform: translate(-50%, -40%);
-            }
+        }
+        
+        .title {
+            margin-top: 40px;
+            font-size: 50px;
+            left: 50%;
+            text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;
         }
     }
-}
-
-.btn {
-    width: 150px;
-    font-size: 20px;
 }

@@ -11,18 +11,18 @@
   src: url("../fonts/Lobster.otf");
 }
 .credits .btn {
-  position: absolute;
-  transform: translate(140%, 800%);
+  left: 87%;
+  top: 90%;
 }
 .credits .developers {
-  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 55%;
   width: 350px;
   height: 260px;
   background: rgba(220, 221, 224, 0.7);
   border-radius: 6%;
   color: white;
-  left: 50%;
-  transform: translate(-50%, 30%);
 }
 .credits .developers .subtitle {
   font-weight: bold;
@@ -44,7 +44,7 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 250px;
+  top: 200px;
   transform: translate(-50%, -50%);
 }
 .addplayers .carousel .item {
@@ -93,7 +93,7 @@
 .ingame .quit-btn {
   position: absolute;
   left: 976px;
-  top: 470px;
+  top: 370px;
   transform: translate(-50%, -50%);
 }
 .ingame .progress {
@@ -173,39 +173,51 @@
   src: url("../fonts/Lobster.otf");
 }
 .wrapper {
+  position: absolute;
+  left: 35%;
   text-align: center;
+  margin-top: 30px;
+}
+.wrapper .show-limits {
+  line-height: 1.3em;
+  border: 2px dashed #fff;
+  border-color: #f0f;
+  border-radius: 10px;
 }
 .wrapper .bg {
   position: absolute;
-  width: 800px;
-  height: 600px;
-  left: 50%;
+  display: inline-block;
   background: url("../img/menu_bg.jpg");
+  background-size: 800px 500px;
   background-repeat: no-repeat;
-  transform: translate(-50%, -8%);
+  transform: translate(-50%, 0%);
   z-index: -1;
 }
 .wrapper .darken {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/menu_bg.jpg");
 }
 .wrapper .screen {
-  margin-top: 60px;
+  text-align: left;
+  position: absolute;
   width: 800px;
-  height: 600px;
+  height: 500px;
+  transform: translate(-50%, 0%);
+}
+.wrapper .screen .obj {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.wrapper .screen .btn {
+  width: 150px;
+  font-size: 20px;
 }
 .wrapper .screen .font {
   font-family: "Lobster";
   color: #dadbde;
 }
-.wrapper .screen .font .title {
-  position: absolute;
+.wrapper .screen .title {
+  margin-top: 40px;
   font-size: 50px;
   left: 50%;
   text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;
-  transform: translate(-50%, -40%);
-}
-
-.btn {
-  width: 150px;
-  font-size: 20px;
 }
