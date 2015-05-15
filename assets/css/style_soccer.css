@@ -1,9 +1,15 @@
 .menu .logo {
   width: 400px;
-  margin-bottom: 30px;
+  top: 30%;
+  left: 50%;
 }
-.menu .btn {
-  margin: 15px;
+.menu #btn-play {
+  top: 65%;
+  left: 50%;
+}
+.menu #btn-credits {
+  top: 80%;
+  left: 50%;
 }
 
 @font-face {
@@ -33,19 +39,17 @@
   src: url("../fonts/Lobster.otf");
 }
 .addplayers .back-btn {
-  position: absolute;
-  transform: translate(-240%, 800%);
+  left: 13%;
+  top: 90%;
 }
 .addplayers .start-btn {
-  position: absolute;
-  transform: translate(140%, 800%);
+  left: 87%;
+  top: 90%;
 }
 .addplayers .carousel {
-  position: absolute;
+  top: 50%;
   width: 100px;
   height: 100px;
-  top: 200px;
-  transform: translate(-50%, -50%);
 }
 .addplayers .carousel .item {
   text-align: center;
@@ -57,30 +61,26 @@
   top: 40%;
 }
 .addplayers .vs {
-  position: absolute;
   font-size: 50px;
   left: 50%;
   top: 250px;
   text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;
-  transform: translate(-50%, -50%);
 }
 .addplayers .name {
-  position: absolute;
   width: 150px;
+  top: 50%;
 }
-.addplayers #name-p1 {
-  position: absolute;
-  transform: translate(510%, 450%);
+.addplayers #n-p1 {
+  left: 70%;
 }
-.addplayers #name-p2 {
-  position: absolute;
-  transform: translate(675%, 450%);
+.addplayers #n-p2 {
+  left: 30%;
 }
 .addplayers #img-p1 {
-  transform: translate(395%, -50%);
+  left: 10%;
 }
 .addplayers #img-p2 {
-  transform: translate(790%, -50%);
+  left: 90%;
 }
 
 @font-face {
@@ -88,84 +88,68 @@
   src: url("../fonts/Lobster.otf");
 }
 .ingame #canvas {
-  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 .ingame .quit-btn {
-  position: absolute;
-  left: 976px;
-  top: 370px;
-  transform: translate(-50%, -50%);
+  left: 87%;
+  top: 90%;
 }
 .ingame .progress {
-  position: absolute;
   width: 100px;
   left: 50%;
-  top: 100px;
-  background-color: #dadbde;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  background-color: #dadbee;
+  border: 1px solid #3e3e3e;
 }
-.ingame .progress .progress-bar {
-  width: 60%;
+.ingame .turn-indicator {
+  top: 20%;
+  width: 80px;
 }
-.ingame .header {
-  position: absolute;
-  left: 50%;
+.ingame #bar-p1 {
+  left: 10%;
 }
-.ingame .header .turn-indicator {
-  position: absolute;
-  top: 60px;
-  transform: translate(-50%, -50%);
+.ingame #bar-p2 {
+  left: 90%;
 }
-.ingame .header #bar-p1 {
-  left: -340px;
+.ingame .score {
+  top: 10%;
 }
-.ingame .header #bar-p2 {
-  left: 340px;
+.ingame #score-p1 {
+  left: 60%;
 }
-.ingame .header .score {
-  position: absolute;
-  top: -20px;
-  transform: translate(-50%, -50%);
+.ingame #score-p2 {
+  left: 40%;
 }
-.ingame .header #score-p1 {
-  left: -70px;
-}
-.ingame .header #score-p2 {
-  left: 70px;
-}
-.ingame .header .vs {
-  position: absolute;
+.ingame .vs {
   font-size: 50px;
-  top: 0%;
+  top: 10%;
+  left: 50%;
   text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;
-  transform: translate(-50%, -50%);
 }
-.ingame .header .profile {
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-.ingame .header .image {
+.ingame .profile {
   width: 80px;
   height: 80px;
+  top: 10%;
 }
-.ingame .header #profile-p1 {
-  left: -340px;
+.ingame #profile-p1 {
+  left: 10%;
 }
-.ingame .header #profile-p2 {
-  left: 340px;
+.ingame #profile-p2 {
+  left: 90%;
 }
-.ingame .header .name {
-  position: absolute;
-  width: 180px;
-  font-size: 20px;
-  top: -20px;
-  transform: translate(-50%, -50%);
+.ingame .name {
+  width: 160px;
+  font-size: 25px;
+  top: 10%;
 }
-.ingame .header #name-p1 {
-  left: -200px;
+.ingame #name-p1 {
+  text-align: left;
+  left: 35%;
 }
-.ingame .header #name-p2 {
-  left: 200px;
+.ingame #name-p2 {
+  text-align: right;
+  left: 65%;
 }
 
 @font-face {
@@ -174,7 +158,7 @@
 }
 .wrapper {
   position: absolute;
-  left: 35%;
+  left: 50%;
   text-align: center;
   margin-top: 30px;
 }
@@ -216,7 +200,7 @@
   color: #dadbde;
 }
 .wrapper .screen .title {
-  margin-top: 40px;
+  margin-top: 60px;
   font-size: 50px;
   left: 50%;
   text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;

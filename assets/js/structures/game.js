@@ -56,6 +56,12 @@ define([ "core/engine", "structures/match", "settings", "core/asset_loader", "co
 		Navigation.getContext().clearRect(0, 0, Settings.gameWidth, Settings.gameHeight);
 		// Draw the field and the pucks
 		drawField();
+		
+		/*// Helper to show mouse position
+		if (myMatch != null) {
+			Navigation.getContext().drawImage(AssetLoader.imgs[ "selected" ],
+				myMatch.getMousePosition().x - 5, myMatch.getMousePosition().y - 5, 10, 10);
+		}*/
 	}
 
 	function drawField() {
@@ -120,10 +126,11 @@ define([ "core/engine", "structures/match", "settings", "core/asset_loader", "co
 			AudioCenter.playSfx("match_start");
 		},
 		stop: function () {
+			AudioCenter.stopTheme("crowd");
 			isPlaying = false;
 			Engine.pause();
-			myMatch.delete();			
-			Navigation.changeScreen(Navigation.ScreenId.main);
+			myMatch.delete();
+			Navigation.changeScreen(Navigation.ScreenId.menu);
 			AudioCenter.playTheme("main_theme");
 		}
 	};

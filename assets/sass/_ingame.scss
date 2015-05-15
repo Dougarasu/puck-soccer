@@ -1,104 +1,82 @@
 @import "settings";
 
 .ingame {
+    $profile-top: 10%;
+    $profile-left: 10%;
+    $name-top: 10%;
+    $name-left: 35%;
+    $score-top: 10%;
+    $score-left: 60%;
+    
     #canvas {
-        position: absolute;
+        left: 50%;
+        top: 50%;
     }
     
     .quit-btn {
-        position: absolute;
-        left: $screen_width * 1.22;
-        top: $screen_height - 130px;
-        transform: translate(-50%, -50%);
+        left: 87%;
+        top: 90%;
     }
     
     .progress {
-        position: absolute;
         width: 100px;
         left: 50%;
-        top: 100px;
-        background-color: $title-color;
-        transform: translate(-50%, -50%);
-        
-        .progress-bar {
-            width: 60%;
-        }
+        top: 20%;
+        background-color: $timer-bg-color;
+        border: $timer-stroke;
     }
     
-    .header {
-        position: absolute;
-        //background: #444;
+    .turn-indicator {
+        top: $profile-top + 10%;
+        width: 80px;
+    }
+    #bar-p1 {
+        left: $profile-left;
+    }
+    #bar-p2 {
+        left: 100% - $profile-left;
+    }
+    
+    .score {
+        top: $score-top;
+    }
+    #score-p1 {
+        left: $score-left;
+    }
+    #score-p2 {
+        left: 100% - $score-left;
+    }
+    
+    .vs {
+        font-size: 50px;
+        top: 10%;
         left: 50%;
-        //transform: translate(-50%, -50%);
-        
-        .turn-indicator {
-            position: absolute;
-            top: 60px;
-            transform: translate(-50%, -50%);
-        }
-        
-        #bar-p1 {
-            left: -340px;
-        }
-        
-        #bar-p2 {
-            left: 340px;
-        }
-        
-        .score {
-            position: absolute;
-            top: -20px;
-            transform: translate(-50%, -50%);
-        }
-        
-        #score-p1 {
-            left: -70px;
-        }
-        
-        #score-p2 {
-            left: 70px;
-        }
-        
-        .vs {
-            position: absolute;
-            font-size: 50px;
-            top: 0%;
-            text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;
-            transform: translate(-50%, -50%);
-        }
-        
-        .profile {
-            position: absolute;
-            transform: translate(-50%, -50%);
-        }
-        
-        .image {
-            width: $profile-ingame-size;
-            height: $profile-ingame-size;
-        }
-        
-        #profile-p1 {
-            left: -$profile-ingame-offset-x;
-        }
-        
-        #profile-p2 {
-            left: $profile-ingame-offset-x;
-        }
-        
-        .name {
-            position: absolute;
-            width: 180px;
-            font-size: 20px;
-            top: -20px;
-            transform: translate(-50%, -50%);
-        }
-        
-        #name-p1 {
-            left: -$name-ingame-offset-x;
-        }
-        
-        #name-p2 {
-            left: $name-ingame-offset-x;
-        }
+        text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;
+    }
+    
+    .profile {
+        width: $profile-ingame-size;
+        height: $profile-ingame-size;
+        top: $profile-top;
+    }
+    #profile-p1 {
+        left: $profile-left;
+    }
+    #profile-p2 {
+        left: 100% - $profile-left;
+    }
+    
+    .name {
+        width: 160px;
+        font-size: 25px;
+        top: $name-top;
+    }
+    #name-p1 {
+        text-align: left;
+        left: $name-left;
+    }
+    #name-p2 {
+        text-align: right;
+        left: 100% - $name-left;
     }
 }

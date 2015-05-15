@@ -1,5 +1,5 @@
 define([ "structures/vector2" ], function (Vector2) {
-	var config, goalHeight = 100;
+	var config, goalHeight = 100, windowWidth, windowHeight;
 
 	config = {
 		gameWidth: 800,
@@ -7,7 +7,7 @@ define([ "structures/vector2" ], function (Vector2) {
 		fieldWidth: 600,
 		fieldHeight: 360,
 		fieldOffsetX: 100,
-		fieldOffsetY: 100,
+		fieldOffsetY: 120,
 		fieldPaddingX: 30,
 		fieldPaddingY: 15,
 		godMode: false,
@@ -31,7 +31,7 @@ define([ "structures/vector2" ], function (Vector2) {
 		},
 		getGoalY: function () {
 			return this.fieldHeight / 2 - goalHeight / 2 + this.fieldOffsetY;
-		},
+		}
 	};
 
 	return config;

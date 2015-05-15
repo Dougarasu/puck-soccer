@@ -42,23 +42,28 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 		init: function (Game) {
 			// Defines all the buttons of the game, according to its behavior
 			var that = this;
-			//$("#play_btn").click(function() {
+			
 			$("#btn-play").click(function() {
 				//$(".profile0").attr("src", $(AssetLoader.imgs[ "profile0" ]).attr("src"));
 				//$(".profile1").attr("src", $(AssetLoader.imgs[ "profile0" ]).attr("src"));
 				that.changeScreen(ScreenId.addplayers);
 			});
+			
 			$(".start-btn").click(function() {
-				$("#name0").html($(".name0").val());
-				$("#name1").html($(".name1").val());	
+				console.log($("#n-p1#focusedInput").html());
+				$("#n-p1#focusedInput").html($("#name-p1").val());
+				$("#n-p2").html($("#name-p2").val());	
 				Game.start();
 			});
+			
 			$("#btn-credits").click(function() {
 				that.changeScreen(ScreenId.credits);
 			});
+			
 			$("#btn-back-credits").click(function() {
 				that.changeScreen(ScreenId.menu);
 			});
+			
 			$("#btn-back-addplayers").click(function() {
 				that.changeScreen(ScreenId.menu);
 			});
@@ -82,7 +87,15 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 		setTimer: function (value) {
 			$("#timer").html(value);
 			$("#timer").attr("style", "width: " + ((value/Settings.turnCooldown) * 100) + "%");
-		}
+		},
+		setActive: function (id, show) {
+			if (show) {
+				$(id).removeClass("hidden");
+			} else {
+				console.log($(id));
+				$(id).addClass("hidden");
+			}
+		} 
 	};
 
 	return makeNewInterface();

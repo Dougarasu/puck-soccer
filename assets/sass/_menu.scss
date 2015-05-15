@@ -1,12 +1,21 @@
 .menu {
+    
+    $top-offset: 65%;
+    
     .logo {
         //background: url("../img/logo.png");
-        //width: 35%;
         width: 400px;
-        margin-bottom: 30px;
+        top: 30%;
+        left: 50%;
     }
     
-    .btn {
-        margin: 15px;
+    #btn-play {
+        top: $top-offset;
+        left: 50%;
+    }
+    
+    #btn-credits {
+        top: $top-offset + 15%;
+        left: 50%;
     }
 }

@@ -6,7 +6,7 @@
 
 .wrapper {
     position: absolute;
-    left: 35%;
+    left: 50%;
     text-align: center;
     margin-top: $screen-top-offset;
     
@@ -59,7 +59,7 @@
         }
         
         .title {
-            margin-top: 40px;
+            margin-top: 60px;
             font-size: 50px;
             left: 50%;
             text-shadow: $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke, $title-stroke;

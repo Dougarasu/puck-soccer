@@ -1,5 +1,5 @@
-define([ "structures/puck", "structures/vector2", "settings", "structures/player", "structures/formation", "structures/ball", "core/asset_loader", "core/audio_center" ],
-	function (Puck, Vector2, Settings, Player, Formation, Ball, AssetLoader, AudioCenter) {
+define([ "structures/puck", "structures/vector2", "settings", "structures/player", "structures/formation", "structures/ball", "core/asset_loader", "core/audio_center", "core/navigation" ],
+	function (Puck, Vector2, Settings, Player, Formation, Ball, AssetLoader, AudioCenter, Navigation) {
 	var i, proto, players = [], mouseDown = false, mouseUp = false, mouseX, mouseY, canv, mag, inputPaused = false,
 		playerOneTurn = true, turnTimer, timerValue = 0,
 		minIndex = 0, maxIndex = 10,
@@ -9,6 +9,14 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 		var match = Object.create(proto);
 		match.distanceSelected = Vector2.new();
 		return match;
+	}
+	
+	function getMousePos (canvas, evt) {
+		var rect = canvas.getBoundingClientRect();
+		return {
+			x: evt.clientX - rect.left,
+			y: evt.clientY - rect.top
+		};
 	}
 	
 	proto = {
@@ -33,7 +41,12 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 			var that = this;
 			
 			timerValue = Settings.turnCooldown;
+			
+			// Show the corresponding turn-indicator
+			Navigation.setActive("#bar-p" + (playerOneTurn ? 1 : 2), false);
 			playerOneTurn = playerOne;
+			Navigation.setActive("#bar-p" + (playerOneTurn ? 1 : 2), true);
+			
 			turnTimer = setInterval((function() {
 				return function () {
 					// Check if the turn time is over for the current playing player
@@ -46,6 +59,10 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 			}()), 1000);
 		},
 		init: function(canvas) {
+			// Hide all the turn-indicators
+			Navigation.setActive("#bar-p1", false);
+			Navigation.setActive("#bar-p2", false);
+			
 			Formation.init(Settings.fieldWidth / 2.0, Settings.fieldHeight);
 			var i, that = this;
 			// Creates pucks for Player1
@@ -70,16 +87,17 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 			canvas.addEventListener("mousedown", function (e) {
 				mouseDown = true;
 				mouseUp = false;
-				mouseX = e.pageX;
-				mouseY = e.pageY;
+				mouseX = getMousePos(this, e).x;
+				mouseY = getMousePos(this, e).y;
 			});
 			canvas.addEventListener("mouseup", function (e) {
 				mouseDown = false;
 				mouseUp = true;
 			});
 			canvas.addEventListener("mousemove", function (e) {
-				mouseX = e.pageX;
-				mouseY = e.pageY;
+				mouseX = getMousePos(this, e).x;
+				mouseY = getMousePos(this, e).y;
+				
 				// Get the distance vector if selected puck
 				if (puckSelected !== -1) {
 					that.distanceSelected.x = that.pucks[ puckSelected ].getCenterX() - mouseX;
@@ -193,6 +211,12 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 			delete players[0];
 			delete players[1];
 			players = [];
+		},
+		getMousePosition: function () {
+			return {
+				x: mouseX,
+				y: mouseY
+			};
 		}
 	};
 

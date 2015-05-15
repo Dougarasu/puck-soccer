@@ -1,6 +1,7 @@
 /* global requirejs */
 requirejs.config({
     // baseUrl: "app",
+    urlArgs: "bust=" + (new Date()).getTime(), // Used to update the cached files when a page is open
 	waitSeconds: 45,
 	paths: {
 		jquery: "../lib/jquery-2.1.3.min",

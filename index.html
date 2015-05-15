@@ -20,25 +20,21 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="bg"></div>
+			<div class="bg screen"></div>
 			
 			<div id="menu" class="menu screen">
-				<div>
-					<img class="logo" src="assets/img/logo.png"></img>
-				</div>
-				<div>
-					<button id="btn-play" class="btn btn-default">Play</button>	
-				</div>
-				<div>
-					<button id="btn-credits" class="btn btn-default">Credits</button>
-				</div>
+				<img class="obj logo" src="assets/img/logo.png"></img>
+				
+				<button id="btn-play" class="obj btn btn-default">Play</button>	
+				<button id="btn-credits" class="obj btn btn-default">Credits</button>
+					
 			</div>
 			
 			<div id="credits" class="credits screen" style="display: none;">
-				<div class="font">
-					<p class="title">Credits</p>
-				</div>
-				<div class="developers">
+				
+				<p class="obj font title">Credits</p>
+				
+				<div class="obj developers">
 					<h3 class="subtitle">Game Design</h3>
 					<h4>Douglas Púppio Pereira</h4>
 					<h3 class="subtitle">Artist</h3>
@@ -46,18 +42,19 @@
 					<h3 class="subtitle">Programmer</h3>
 					<h4>Douglas Púppio Pereira</h4>
 				</div>
+				
 				<div>
-					<button id="btn-back-credits" class="btn btn-default">Back</button>	
+					<button id="btn-back-credits" class="obj btn btn-default">Back</button>	
 				</div>
+				
 			</div>
 		
 			<div id="addplayers" class="addplayers screen" style="display: none;">
-				<div class="font">
-					<p class="title">Add Players</p>
-				</div>
-						
+				
+				<p class="obj font title">Add Players</p>
+				
 				<!-- Profile Player1 -->
-				<div id="img-p1" class="carousel slide" data-ride="carousel" data-interval="">
+				<div id="img-p1" class="obj carousel slide" data-ride="carousel" data-interval="">
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
 				    <div class="item active">
@@ -84,12 +81,12 @@
 				  </a>
 				</div>
 				<!-- Player1 Name -->
-				<div class="form-group name" id="name-p1">
+				<div class="obj form-group name" id="n-p1">
 				  <input class="form-control" id="focusedInput" value="player1" type="text">
 				</div>
 				
 				<!-- Profile Player2 -->
-				<div id="img-p2" class="carousel slide" data-ride="carousel" data-interval="">
+				<div id="img-p2" class="obj carousel slide" data-ride="carousel" data-interval="">
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
 				    <div class="item">
@@ -116,60 +113,54 @@
 				  </a>
 				</div>
 				<!-- Player2 Name -->
-				<div class="form-group name" id="name-p2">
+				<div class="obj form-group name" id="n-p2">
 				  <input class="form-control" id="focusedInput" value="player2" type="text">
 				</div>
 				
-				<div class="font">
-					<p class="vs">VS</p>
-				</div>
+				<p class="obj font vs">VS</p>
 				
 				<!-- Back Button -->
-				<div>
-					<button id="btn-back-addplayers" class="btn btn-default back-btn">Back</button>	
-				</div>
+				<button id="btn-back-addplayers" class="obj btn btn-default back-btn">Back</button>
+				
 				<!-- Start Button -->
-				<div>
-					<button id="btn-start" class="btn btn-default start-btn">Start!</button>	
-				</div>
+				<button id="btn-start" class="obj btn btn-default start-btn">Start!</button>
+				
 			</div>
 		
 			<div id="ingame" class="ingame screen" style="display: none;">
-				<canvas id="canvas">
+				
+				<canvas id="canvas" class="obj">
 					<p>You're browser does not support the required functionality to play this game.</p>
 					<p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
 				</canvas>
-				<div class="header">
-					<!-- Profile Player1 -->
-			    <img id="profile-p1" class="image profile" src="assets/img/profiles/brazil.png">
-			    <span id="bar-p1" class="turn-indicator label label-success">Your turn!</span>
-			    <h1 id="score-p1" class="score">0</h1>
-			    <h1 id="name-p1" class="name">player1</h1>
-					
-					<div class="font">
-						<p class="vs">VS</p>
-					</div>
-					
-					<!-- Profile Player2 -->
-					<img id="profile-p2" class="image profile" src="assets/img/profiles/usa.png">
-			    <span id="bar-p2" class="turn-indicator label label-success">Your turn!</span>
-			    <h1 id="score-p2" class="score">0</h1>
-					<h1 id="name-p2" class="name">player2</h1>
-				</div>
+		
+				<!-- Profile Player1 -->
+		    <img id="profile-p1" class="obj profile" src="assets/img/profiles/brazil.png">
+		    <span id="bar-p1" class="obj turn-indicator label label-success">Your turn!</span>
+		    <h1 id="score-p1" class="obj score">0</h1>
+		    <h1 id="name-p1" class="obj name">player1</h1>
 				
-				<div class="progress progress-striped active">
+				<p class="obj font vs">VS</p>
+				
+				<!-- Profile Player2 -->
+				<img id="profile-p2" class="obj profile" src="assets/img/profiles/usa.png">
+		    <span id="bar-p2" class="obj turn-indicator label label-success">Your turn!</span>
+		    <h1 id="score-p2" class="obj score">0</h1>
+				<h1 id="name-p2" class="obj name">player2</h1>
+				
+				<!-- Cooldown Turn Statusbar -->
+				<div class="obj progress progress-striped active">
 				  <div id="timer" class="progress-bar progress-bar-danger" style="width: 100%"></div>
 				</div>
 				
 				<!-- Quit Button -->
-				<div>
-					<button class="btn btn-default quit-btn">Quit</button>	
-				</div>
+				<!--button class="obj btn btn-default quit-btn">Quit</button-->
+				
 			</div>
 		</div>
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="assets/lib/jquery-2.1.3"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script data-main="assets/js/main" src="assets/lib/require.js"></script>
