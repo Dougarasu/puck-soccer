@@ -48,7 +48,6 @@ define ([ "structures/puck", "settings", "structures/vector2" ], function (Puck,
 		};
 
 		var myBall = new superC();
-		myBall.name = "ball";
 		myBall.size = Vector2.new(Settings.ballRadius, Settings.ballRadius);
 		myBall.radius = myBall.size.x / 2;
 		return myBall;

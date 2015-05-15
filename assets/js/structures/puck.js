@@ -2,12 +2,12 @@ define([ "structures/vector2", "settings", "core/asset_loader", "core/audio_cent
 	function (Vector2, Settings, AssetLoader, AudioCenter) {
 	var proto, d, u, dMag, hitId;
 
-	function makeNewPuck (id) {
+	function makeNewPuck (id, spriteId = "ball") {
 		var puck = Object.create(proto);
 		puck.id = id;
 		puck.position = Vector2.new();
 		puck.velocity = Vector2.new();
-		puck.name = (id >= 5 ? "p1" : "p2");
+		puck.spriteId = spriteId;
 		puck.size = Vector2.new(Settings.puckRadius, Settings.puckRadius);
 		puck.radius = puck.size.x / 2;
 		return puck;
@@ -33,7 +33,7 @@ define([ "structures/vector2", "settings", "core/asset_loader", "core/audio_cent
 			context.stroke();
 			*/
 			
-			context.drawImage(AssetLoader.imgs[ this.name ], this.position.x, this.position.y, this.size.x, this.size.y);			
+			context.drawImage(AssetLoader.imgs[ this.spriteId ], this.position.x, this.position.y, this.size.x, this.size.y);			
 			/*
 			// Center coordinate
 			context.fillStyle = "red";

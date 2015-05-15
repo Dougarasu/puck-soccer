@@ -31,8 +31,6 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 
 			el = $("canvas");
 			context = canvas.getContext("2d");
-			/*$(".screen.menu").show();
-			$("#canvas").show();*/
 
 			// Set the background in the
 			this.changeScreen(ScreenId.menu);
@@ -44,15 +42,28 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 			var that = this;
 			
 			$("#btn-play").click(function() {
-				//$(".profile0").attr("src", $(AssetLoader.imgs[ "profile0" ]).attr("src"));
-				//$(".profile1").attr("src", $(AssetLoader.imgs[ "profile0" ]).attr("src"));
+				// Reset all the index for the profile images
+				$("#img-p1 .active").removeClass("active");
+				$("#img-p2 .active").removeClass("active");
+				
+				$("#img-p1 .item #0").parent().addClass("active");
+				$("#img-p2 .item #1").parent().addClass("active");
+				
+				// Reset all the names in the addplayers screen
+				$("#n-p1").children(0).val("player1");
+				$("#n-p2").children(0).val("player2");
+				
 				that.changeScreen(ScreenId.addplayers);
 			});
 			
 			$(".start-btn").click(function() {
-				console.log($("#n-p1#focusedInput").html());
-				$("#n-p1#focusedInput").html($("#name-p1").val());
-				$("#n-p2").html($("#name-p2").val());	
+				// Set the data from the addplayers screen to the ingame screen
+				$("#profile-p1").attr("src", $("#img-p1 .active").children(0).attr("src"));
+				$("#profile-p2").attr("src", $("#img-p2 .active").children(0).attr("src"));
+				
+				$("#name-p1").html($("#n-p1").children(0).val());
+				$("#name-p2").html($("#n-p2").children(0).val());
+				
 				Game.start();
 			});
 			
@@ -68,6 +79,9 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 				that.changeScreen(ScreenId.menu);
 			});
 		},
+		getProfileId: function (playerId) {
+			return $("#img-p" + playerId + " .active").children(0).attr("id");
+		},
 		getGameFieldCanvas: function () {
 			return canvas;
 		},
@@ -81,8 +95,8 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 		getContext: function () {
 			return context;
 		},
-		setScreenText: function (type, value) {
-			$("#"+type).text(value);
+		setScreenHtml: function (type, value) {
+			$(type).html(value);
 		},
 		setTimer: function (value) {
 			$("#timer").html(value);
@@ -92,7 +106,6 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 			if (show) {
 				$(id).removeClass("hidden");
 			} else {
-				console.log($(id));
 				$(id).addClass("hidden");
 			}
 		} 

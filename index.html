@@ -23,6 +23,7 @@
 			<div class="bg screen"></div>
 			
 			<div id="menu" class="menu screen">
+				
 				<img class="obj logo" src="assets/img/logo.png"></img>
 				
 				<button id="btn-play" class="obj btn btn-default">Play</button>	
@@ -43,9 +44,7 @@
 					<h4>Douglas Púppio Pereira</h4>
 				</div>
 				
-				<div>
-					<button id="btn-back-credits" class="obj btn btn-default">Back</button>	
-				</div>
+				<button id="btn-back-credits" class="obj btn btn-default">Back</button>
 				
 			</div>
 		
@@ -57,17 +56,17 @@
 				<div id="img-p1" class="obj carousel slide" data-ride="carousel" data-interval="">
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-				    <div class="item active">
-				      <img src="assets/img/profiles/brazil.png">
+				    <div class="item">
+				      <img id="0" src="assets/img/profiles/brazil.png">
 				    </div>
 				    <div class="item">
-				      <img src="assets/img/profiles/china.png">
+				      <img id="1" src="assets/img/profiles/china.png">
 				    </div>
 				    <div class="item">
-				      <img src="assets/img/profiles/poland.png">
+				      <img id="2" src="assets/img/profiles/poland.png">
 				    </div>
 				    <div class="item">
-				      <img src="assets/img/profiles/usa.png">
+				      <img id="3" src="assets/img/profiles/usa.png">
 				    </div>
 				  </div>
 				  <!-- Controls -->
@@ -90,16 +89,16 @@
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
 				    <div class="item">
-				      <img src="assets/img/profiles/brazil.png">
+				      <img id="0" src="assets/img/profiles/brazil.png">
 				    </div>
 				    <div class="item">
-				      <img src="assets/img/profiles/china.png">
-				    </div>
-				    <div class="item">
-				      <img src="assets/img/profiles/poland.png">
+				      <img id="1" src="assets/img/profiles/china.png">
 				    </div>
 				    <div class="item active">
-				      <img src="assets/img/profiles/usa.png">
+				      <img id="2" src="assets/img/profiles/poland.png">
+				    </div>
+				    <div class="item">
+				      <img id="3" src="assets/img/profiles/usa.png">
 				    </div>
 				  </div>
 				  <!-- Controls -->
@@ -157,12 +156,10 @@
 				<!--button class="obj btn btn-default quit-btn">Quit</button-->
 				
 			</div>
+	
 		</div>
 		
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="assets/lib/jquery-2.1.3"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="assets/js/bootstrap.min.js"></script>
 		<script data-main="assets/js/main" src="assets/lib/require.js"></script>
 	</body>
 </html>

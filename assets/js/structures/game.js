@@ -13,7 +13,7 @@ define([ "core/engine", "structures/match", "settings", "core/asset_loader", "co
 		//alert("Goooal! Congratz player " + (playerId+1));
 		AudioCenter.playSfx("goal");
 		myMatch.getPlayer(playerId).score += 1;
-		Navigation.setScreenText("score_" + playerId, myMatch.getPlayer(playerId).score);
+		Navigation.setScreenHtml("#score-p" + (playerId + 1), myMatch.getPlayer(playerId).score);
 
 		// Check if the current player get the goals to win
 		if (myMatch.getPlayer(playerId).score === Settings.winGoals) {
@@ -118,8 +118,8 @@ define([ "core/engine", "structures/match", "settings", "core/asset_loader", "co
 			myMatch.start(true);
 
 			// Reset the scores to zero
-			Navigation.setScreenText("score_0", 0);
-			Navigation.setScreenText("score_1", 0);
+			Navigation.setScreenHtml("#score-p1", 0);
+			Navigation.setScreenHtml("#score-p2", 0);
 
 			isPlaying = true;
 			AudioCenter.playTheme("crowd");

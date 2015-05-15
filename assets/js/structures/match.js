@@ -64,14 +64,17 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 			Navigation.setActive("#bar-p2", false);
 			
 			Formation.init(Settings.fieldWidth / 2.0, Settings.fieldHeight);
-			var i, that = this;
+			var i, that = this, spriteId;
+			
 			// Creates pucks for Player1
+			spriteId = Navigation.getProfileId("1");
 			for (i = 0; i < 5; i += 1) {
-				this.pucks.push(Puck.new(i));
+				this.pucks.push(Puck.new(i, spriteId));
 			}
 			// Creates pucks for Player2
+			spriteId = Navigation.getProfileId("2");
 			for (i = 5; i < 10; i += 1) {
-				this.pucks.push(Puck.new(i));
+				this.pucks.push(Puck.new(i, spriteId));
 			}
 			// Creates the ball
 			this.pucks.push(Ball.new(11));
