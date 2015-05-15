@@ -9,6 +9,8 @@
     left: 50%;
     text-align: center;
     margin-top: $screen-top-offset;
+    width: $screen_width;
+    height: $screen_height;
     
     .show-limits {
         //background-color: #f0f;
@@ -20,7 +22,7 @@
     
     .bg {
         position: absolute;
-        display: inline-block;
+        //display: inline-block;
         background: url($bg-name);
         background-size: $screen_width $screen_height;
         background-repeat: no-repeat;
@@ -39,9 +41,9 @@
     .screen {
         text-align: left;
         position: absolute;
-        width: $screen_width;
-        height: $screen_height;
         transform: translate(-50%, 0%);
+        width: inherit;
+        height: inherit;
         
         .obj {
             position: absolute;

@@ -113,7 +113,7 @@
   left: 90%;
 }
 .ingame .score {
-  top: 10%;
+  top: 8%;
 }
 .ingame #score-p1 {
   left: 60%;
@@ -141,7 +141,7 @@
 .ingame .name {
   width: 160px;
   font-size: 25px;
-  top: 10%;
+  top: 8%;
 }
 .ingame #name-p1 {
   text-align: left;
@@ -161,6 +161,8 @@
   left: 50%;
   text-align: center;
   margin-top: 30px;
+  width: 800px;
+  height: 500px;
 }
 .wrapper .show-limits {
   line-height: 1.3em;
@@ -170,7 +172,6 @@
 }
 .wrapper .bg {
   position: absolute;
-  display: inline-block;
   background: url("../img/menu_bg.jpg");
   background-size: 800px 500px;
   background-repeat: no-repeat;
@@ -183,9 +184,9 @@
 .wrapper .screen {
   text-align: left;
   position: absolute;
-  width: 800px;
-  height: 500px;
   transform: translate(-50%, 0%);
+  width: inherit;
+  height: inherit;
 }
 .wrapper .screen .obj {
   position: absolute;

@@ -1,6 +1,6 @@
-define([ "structures/puck", "structures/vector2", "settings", "structures/player", "structures/formation", "structures/ball", "core/asset_loader", "core/audio_center", "core/navigation" ],
-	function (Puck, Vector2, Settings, Player, Formation, Ball, AssetLoader, AudioCenter, Navigation) {
-	var i, proto, players = [], mouseDown = false, mouseUp = false, mouseX, mouseY, canv, mag, inputPaused = false,
+define([ "structures/puck", "structures/vector2", "settings", "structures/player", "structures/formation", "structures/ball", "core/asset_loader", "core/audio_center", "core/navigation", "core/input" ],
+	function (Puck, Vector2, Settings, Player, Formation, Ball, AssetLoader, AudioCenter, Navigation, Input) {
+	var i, proto, players = [], canv, mag,
 		playerOneTurn = true, turnTimer, timerValue = 0,
 		minIndex = 0, maxIndex = 10,
 		puckSelected = -1, selectedPos = Vector2.new(), selectedSize = 0;
@@ -11,17 +11,9 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 		return match;
 	}
 	
-	function getMousePos (canvas, evt) {
-		var rect = canvas.getBoundingClientRect();
-		return {
-			x: evt.clientX - rect.left,
-			y: evt.clientY - rect.top
-		};
-	}
-	
 	proto = {
 		getInputPaused: function () {
-			return inputPaused;
+			return Input.inputPaused;
 		},
 		pucks: [],
 		start: function (playerOne, p0Info, p1Info) {
@@ -29,8 +21,8 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 		},
 		endTurn: function (changePlayer, loop) {
 			puckSelected = -1;
-			mouseDown = false;
-			mouseUp = true;
+			Input.mouseDown = false;
+			Input.mouseUp = true;
 			clearInterval(turnTimer);
 			//console.log("player " + (playerOneTurn?"one":"two") + " end turn");
 			if (loop){
@@ -87,46 +79,17 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 			this.reset();
 
 			// Create input state
-			canvas.addEventListener("mousedown", function (e) {
-				mouseDown = true;
-				mouseUp = false;
-				mouseX = getMousePos(this, e).x;
-				mouseY = getMousePos(this, e).y;
-			});
-			canvas.addEventListener("mouseup", function (e) {
-				mouseDown = false;
-				mouseUp = true;
-			});
-			canvas.addEventListener("mousemove", function (e) {
-				mouseX = getMousePos(this, e).x;
-				mouseY = getMousePos(this, e).y;
-				
+			Input.useMouse(canvas);
+			
+			Input.onMouseDrag = function() {
 				// Get the distance vector if selected puck
 				if (puckSelected !== -1) {
-					that.distanceSelected.x = that.pucks[ puckSelected ].getCenterX() - mouseX;
-					that.distanceSelected.y = that.pucks[ puckSelected ].getCenterY() - mouseY;
+					that.distanceSelected.x = that.pucks[ puckSelected ].getCenterX() - this.mouseX;
+					that.distanceSelected.y = that.pucks[ puckSelected ].getCenterY() - this.mouseY;
 				}
-			});
-
-			console.log("Current match initialized.");
-		},
-		inputUpdate: function (deltaTime) {
-			// If input is paused, then check if all the pucks, including the ball, have velocity.magnitude() == 0
-			// Else execute the input normally
-			if (inputPaused) {
-				for (i = 0; i < this.pucks.length; i += 1) {
-					if (this.pucks[ i ].velocity.magnitude() > 0.05) {
-						break;
-					}
-				}
-				if (i === 11) {
-					inputPaused = false;
-					this.endTurn(true, true);
-				}
-			} else {
-				if (mouseDown) {
-					puckSelected = -1;
-					
+			};
+			Input.onMouseDown = function() {
+				if (puckSelected == -1) {
 					// Check which player is playing
 					if (!Settings.godMode) {
 						minIndex = playerOneTurn ? 0 : 5;
@@ -135,28 +98,49 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 
 					for (i = minIndex; i < maxIndex; i += 1) {
 						// Check if the corresponding player hit one puck
-						if (Vector2.new(this.pucks[i].getCenterX() - mouseX, this.pucks[ i ].getCenterY() - mouseY).magnitude() <
-							this.pucks[ i ].radius + this.pucks[ 10 ].radius) {
+						if (Vector2.new(that.pucks[i].getCenterX() - this.mouseX, that.pucks[ i ].getCenterY() - this.mouseY).magnitude() <
+							that.pucks[ i ].radius + that.pucks[ 10 ].radius) {
 							puckSelected = i;
-							mouseDown = false;
-							this.distanceSelected.x = this.pucks[ puckSelected ].getCenterX() - mouseX;
-							this.distanceSelected.y = this.pucks[ puckSelected ].getCenterY() - mouseY;
-							// Draw the 
+							that.distanceSelected.x = that.pucks[ puckSelected ].getCenterX() - this.mouseX;
+							that.distanceSelected.y = that.pucks[ puckSelected ].getCenterY() - this.mouseY;
 							break;
 						}
 					}
-				} else if (mouseUp && puckSelected !== -1) {
-					AudioCenter.playSfx("puck_whoosh");
-
-					this.pucks[ puckSelected ].velocity =
-						Vector2.new(this.pucks[ puckSelected ].getCenterX() - mouseX, this.pucks[ puckSelected ].getCenterY() - mouseY);
-					mag = this.pucks[ puckSelected ].velocity.magnitude() / Settings.maxDirectionalSize;
-					this.pucks[ puckSelected ].velocity.normalize().multiplyMe((Math.abs(mag) > 0.5 ? 1 : mag*2) * Settings.pullStrength);
-					puckSelected = -1;
-					inputPaused = true;
-					this.endTurn(false, false);
 				}
-			}
+			};
+			Input.onMouseUp = function() {
+				if (puckSelected != -1) {
+					AudioCenter.playSfx("puck_whoosh");
+					
+					that.pucks[ puckSelected ].velocity =
+						Vector2.new(that.pucks[ puckSelected ].getCenterX() - Input.mouseX, that.pucks[ puckSelected ].getCenterY() - Input.mouseY);
+					mag = that.pucks[ puckSelected ].velocity.magnitude() / Settings.maxDirectionalSize;
+					that.pucks[ puckSelected ].velocity.normalize().multiplyMe((Math.abs(mag) > 0.5 ? 1 : mag*2) * Settings.pullStrength);
+					puckSelected = -1;
+					Input.inputPaused = true;
+					that.endTurn(false, false);	
+				}
+			};
+			Input.update = function(deltaTime) {
+				// If input is paused, then check if all the pucks, including the ball, have velocity.magnitude() == 0
+				// Else execute the input normally
+				if (Input.inputPaused) {
+					for (i = 0; i < that.pucks.length; i += 1) {
+						if (that.pucks[ i ].velocity.magnitude() > 0.05) {
+							break;
+						}
+					}
+					if (i == 11) {
+						Input.inputPaused = false;
+						that.endTurn(true, true);
+					}
+				}
+			};
+
+			console.log("Current match initialized.");
+		},
+		inputUpdate: function (deltaTime) {
+			Input.update(deltaTime);
 		},
 		getSelectedPuck: function () {
 			return puckSelected != -1 ? this.pucks[ puckSelected ] : null;
@@ -214,12 +198,6 @@ define([ "structures/puck", "structures/vector2", "settings", "structures/player
 			delete players[0];
 			delete players[1];
 			players = [];
-		},
-		getMousePosition: function () {
-			return {
-				x: mouseX,
-				y: mouseY
-			};
 		}
 	};
 
