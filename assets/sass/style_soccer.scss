@@ -4,6 +4,10 @@
 @import "ingame";
 @import "settings";
 
+body {
+	background: #121212;
+}
+
 .wrapper {
     position: absolute;
     left: 50%;

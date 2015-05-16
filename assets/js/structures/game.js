@@ -100,7 +100,7 @@ define([ "core/engine", "structures/match", "settings", "core/asset_loader", "co
 		init: function (canvas) {
 			Navigation.init(this);
 			Engine.init(update, draw);
-			//AudioCenter.playTheme("main_theme");
+			AudioCenter.playTheme("main_theme");
 			return true;
 		},
 		start: function () {

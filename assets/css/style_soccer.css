@@ -156,6 +156,10 @@
   font-family: "Lobster";
   src: url("../fonts/Lobster.otf");
 }
+body {
+  background: #121212;
+}
+
 .wrapper {
   position: absolute;
   left: 50%;
