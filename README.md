@@ -1,35 +1,28 @@
-<<<<<<< HEAD
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
-
-
-Hi there! Welcome to Cloud9 IDE!
-
-To get you started, we have created a small hello world application.
-
-1) Open the hello-world.php file
-
-2) Follow the run instructions in the file's comments
-
-3) If you want to look at the Apache logs, check out ~/lib/apache2/log
-
-And that's all there is to it! Just have fun. Go ahead and edit the code, 
-or add new files. It's all up to you! 
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-=======
 # PuckSoccer
-Game made entirely with JavaScript, HTML5, CSS and jQuery.
->>>>>>> 67ff2a3c9d15150f3d989b2c7849475aae3f2769
+
+Game made entirely developed with JavaScript, HTML5, CSS and jQuery.
+
+======
+
+## Official Link:
+https://pucksoccergame-douglaspuppio.c9.io/
+
+## High-Concept:
+"Puck Soccer" app is a sport web-browser game where two players compete against each other in an exciting Soccer match!"
+
+## Objectives:
+- A Goal is done when a player kick the Ball in between the goal posts.
+- A player Wins when 3 goals are scored.
+
+## Requirements:
+- Platform(s): desktop (Mobile support coming soon)
+- Supported Browser(s): Mozilla Firefox (Google Chrome support coming soon)
+
+## Controls:
+Two users will have to use the 'Mouse' to control the pucks, where clicking over one 'Puck' will allow the current player to set a 'Direction' and a 'Strength' for the kick.
+
+## TO-DO list:
+- Support for others browsers.
+- Support for mobile devices.
+- Add Sound and Music buttons (on/off).
