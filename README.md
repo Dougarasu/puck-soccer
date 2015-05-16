@@ -3,7 +3,6 @@
 
 Game made entirely developed with JavaScript, HTML5, CSS and jQuery.
 
-======
 
 ## Official Link:
 https://pucksoccergame-douglaspuppio.c9.io/
