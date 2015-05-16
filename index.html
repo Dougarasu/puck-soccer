@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>Bootstrap 101 Template</title>
+		<title>Puck-Soccer Game!</title>
 		
 		<!-- Bootstrap -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 		<div class="wrapper">
 			<div class="bg screen"></div>
 			
-			<div id="menu" class="menu screen">
+			<div id="menu" class="menu screen" style="display: none;">
 				
 				<img class="obj logo" src="assets/img/logo.png"></img>
 				
@@ -81,7 +81,7 @@
 				</div>
 				<!-- Player1 Name -->
 				<div class="obj form-group name" id="n-p1">
-				  <input class="form-control" id="focusedInput" value="player1" type="text">
+				  <input class="form-control" id="focusedInput" maxlength="10" value="player1" type="text">
 				</div>
 				
 				<!-- Profile Player2 -->
@@ -113,7 +113,7 @@
 				</div>
 				<!-- Player2 Name -->
 				<div class="obj form-group name" id="n-p2">
-				  <input class="form-control" id="focusedInput" value="player2" type="text">
+				  <input class="form-control" id="focusedInput" maxlength="10" value="player2" type="text">
 				</div>
 				
 				<p class="obj font vs">VS</p>
@@ -154,6 +154,13 @@
 				
 				<!-- Quit Button -->
 				<!--button class="obj btn btn-default quit-btn">Quit</button-->
+				
+			</div>
+			
+			<div id="notSupported" class="not-supported screen" style="display: none;">
+				
+				<p class="obj font what">Sorry!</p>
+				<p class="obj font why">Not Supported Yet :(</p>
 				
 			</div>
 	

@@ -8,7 +8,8 @@ define([ "core/asset_loader", "settings" ], function (AssetLoader, Settings) {
 		menu: 0,
 		credits: 1,
 		addplayers: 2,
-		ingame: 3
+		ingame: 3,
+		notSupported: 4
 	};
 
 	function makeNewInterface() {

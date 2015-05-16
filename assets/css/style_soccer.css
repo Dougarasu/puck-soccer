@@ -139,17 +139,17 @@
   left: 90%;
 }
 .ingame .name {
-  width: 160px;
+  width: 250px;
   font-size: 25px;
   top: 8%;
 }
 .ingame #name-p1 {
   text-align: left;
-  left: 35%;
+  left: 36%;
 }
 .ingame #name-p2 {
   text-align: right;
-  left: 65%;
+  left: 64%;
 }
 
 @font-face {
@@ -180,6 +180,20 @@
 }
 .wrapper .darken {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/menu_bg.jpg");
+}
+.wrapper .not-supported {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/menu_bg.jpg");
+}
+.wrapper .not-supported .font {
+  font-size: 50px;
+  left: 50%;
+  text-shadow: #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px, #3e3e3e 0px 0px 5px;
+}
+.wrapper .not-supported .what {
+  top: 40%;
+}
+.wrapper .not-supported .why {
+  top: 60%;
 }
 .wrapper .screen {
   text-align: left;
