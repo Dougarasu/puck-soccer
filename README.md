@@ -1,11 +1,11 @@
 
 # PuckSoccer
 
-[thumbnail](yes)
-
 A 2D sport game where two players compete against each other in an exciting button football match.
 
-[Play Online!](https://pucksoccergame-douglaspuppio.c9.io/)
+[Play Online!]()
+
+<img src="https://github.com/Dougarasu/puck-soccer/blob/master/puck_soccer_cover.jpg" alt="" width="auto" height="auto">
 
 ## Input
 <table>
@@ -89,10 +89,10 @@ After cloning (https://github.com/Dougarasu/puck-soccer.git) or downloading this
     <td>Google Chrome</td><td>Used during development, no known issues.</td>
   </tr>
   <tr>
-    <td>Mozilla Firefox</td><td>Untested.</td>
+    <td>Mozilla Firefox</td><td>No know issues.</td>
   </tr>
   <tr>
-    <td>Internet Explorer 10+</td><td>Untested.</td>
+    <td>Internet Explorer 10+</td><td>Sound is not working.</td>
   </tr>
   <tr>
     <td>Safari</td><td>Untested.</td>
