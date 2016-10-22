@@ -109,7 +109,7 @@ After cloning (https://github.com/Dougarasu/puck-soccer.git) or downloading this
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project was made for an academic purpose only.
 
 ### TO-DO List
 * Support for others browsers.
