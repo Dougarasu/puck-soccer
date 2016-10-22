@@ -3,7 +3,7 @@
 
 A 2D sport game where two players compete against each other in an exciting button football match.
 
-[Play Online!]()
+### [Play Online!]()
 
 <img src="https://github.com/Dougarasu/puck-soccer/blob/master/puck_soccer_cover.jpg" alt="" width="auto" height="auto">
 
