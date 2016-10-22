@@ -25,9 +25,9 @@ requirejs([ "structures/game", "jquery", "core/navigation", "settings", "core/in
 			$.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
 		}
 		// If it is a mobile OR it isn't Mozilla browser, then show the "Not supported" screen
-		if (Input.isMobile.any() != null || !$.browser.mozilla) {
-			Navigation.changeScreen(Navigation.ScreenId.notSupported);
-		} else {
+//		if (Input.isMobile.any() != null || !$.browser.mozilla) {
+//			Navigation.changeScreen(Navigation.ScreenId.notSupported);
+//		} else {
 			Navigation.changeScreen(Navigation.ScreenId.menu);
 			// Twitter Bootstrap 3 carousel plugin
 	        $("#element").carousel();
@@ -37,6 +37,6 @@ requirejs([ "structures/game", "jquery", "core/navigation", "settings", "core/in
 			
 			console.log("Navigation setup" + (loaded ? " " : "NOT ") + "initialized.");
 			loaded = Game.init(Navigation.getGameFieldCanvas());
-		}
+//		}
 	});
 });
