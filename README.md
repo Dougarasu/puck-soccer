@@ -56,29 +56,51 @@ These instructions will get you a copy of the project up and running on your loc
 
 After cloning (https://github.com/Dougarasu/puck-soccer.git) or downloading this project to your computer:
 
-1. Install Compass to compile SASS (if you haven't already installed):
+  1- Install Compass to compile SASS (if you haven't already installed):
 
-* Windows
+#### Windows:
 
 `gem install compass`
 
-* Linux
+#### Linux:
 
 `sudo gem install compass`
 
-2. After installation of Compass, use the command below to watch changes on the styling files:
+  2- After installation of Compass, use the command below to watch changes on the styling files:
 
 `compass watch`
 
-3. The styles files are located in the folder "assets/sass", with the extension ".scss".
+  3- The style files are located in the folder "assets/sass", with the extension ".scss".
 
 ## Built With
 
 * Javascript - Scripting physics, mechanics and behavior of game structure and elements
 * HTML / CSS - Interface and styling
 * Compass / SASS - Compiling style files from SASS to CSS
-* (Require JS)[http://requirejs.org/] - File and module loader
-* (GIMP)[https://www.gimp.org/] - Image editing
+* [Require JS](http://requirejs.org/) - File and module loader
+* [GIMP](https://www.gimp.org/) - Image editing
+
+## Compatibility
+<table>
+  <tr>
+    <th>Browser</th><th>Comments</th>
+  </tr>
+  <tr>
+    <td>Google Chrome</td><td>Used during development, no known issues.</td>
+  </tr>
+  <tr>
+    <td>Mozilla Firefox</td><td>Untested.</td>
+  </tr>
+  <tr>
+    <td>Internet Explorer 10+</td><td>Untested.</td>
+  </tr>
+  <tr>
+    <td>Safari</td><td>Untested.</td>
+  </tr>
+  <tr>
+    <td>Opera</td><td>Untested.</td>
+  </tr>
+</table>
 
 ## Authors
 
